@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the AWDocumentCapture class from the document_capture library, for the Dart programming language.">
+  <title>AWDocumentCapture class - document_capture library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../static-assets/styles.css?v1">
+  <link rel="icon" href="../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">document_capture</a></li>
+    <li><a href="../document_capture/document_capture-library.html">document_capture</a></li>
+    <li class="self-crumb">AWDocumentCapture class</li>
+  </ol>
+  <div class="self-name">AWDocumentCapture</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-class">AWDocumentCapture</span> class 
+ 
+</h1></div>
+
+    
+
+
+
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
+
+    <dl class="constructor-summary-list">
+        <dt id="AWDocumentCapture" class="callable">
+          <span class="name"><a href="../document_capture/AWDocumentCapture/AWDocumentCapture.html">AWDocumentCapture</a></span><span class="signature">(<span class="parameter" id="-param-onDocumentReadError">{<span class="type-annotation">void</span> <span class="parameter-name">onDocumentReadError</span>()?, </span><span class="parameter" id="-param-onDocumentReaderTimedOut"><span class="type-annotation">void</span> <span class="parameter-name">onDocumentReaderTimedOut</span>()?, </span><span class="parameter" id="-param-onDocumentChipError"><span class="type-annotation">void</span> <span class="parameter-name">onDocumentChipError</span>()?, </span><span class="parameter" id="-param-performICAO"><span class="type-annotation"><a href="../document_capture/ICAO.html">ICAO</a></span> <span class="parameter-name">performICAO</span> = <span class="default-value">ICAO.none</span>, </span><span class="parameter" id="-param-isInitilializedFunction"><span class="type-annotation">void</span> <span class="parameter-name">isInitilializedFunction</span>()?, </span><span class="parameter" id="-param-returnEncryptedString"><span class="type-annotation">void</span> <span class="parameter-name">returnEncryptedString</span>(<span class="parameter" id="param-encryptedString"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">encryptedString</span></span>)?, </span><span class="parameter" id="-param-returnImages"><span class="type-annotation">void</span> <span class="parameter-name">returnImages</span>(<span class="parameter" id="param-items"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a></span> <span class="parameter-name">items</span></span>)?, </span><span class="parameter" id="-param-encryptionNeeded"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">encryptionNeeded</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-checkHologram"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">checkHologram</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-doublePageSpread"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">doublePageSpread</span> = <span class="default-value">false</span>, </span><span class="parameter" id="-param-multiPageProcessing"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">multiPageProcessing</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-scenarioIdentifier"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">scenarioIdentifier</span> = <span class="default-value">ScenarioIdentifier.SCENARIO_FULL_PROCESS</span>, </span><span class="parameter" id="-param-timeout"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">timeout</span> = <span class="default-value">20.0</span>, </span><span class="parameter" id="-param-timeoutFromFirstDetect"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">timeoutFromFirstDetect</span> = <span class="default-value">20.0</span>, </span><span class="parameter" id="-param-timeoutFromFirstDocType"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> <span class="parameter-name">timeoutFromFirstDocType</span> = <span class="default-value">20.0</span>, </span><span class="parameter" id="-param-showSkipNextPageButton"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">showSkipNextPageButton</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-baseURL"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">baseURL</span>, </span><span class="parameter" id="-param-reprocessingAPIKey"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reprocessingAPIKey</span>, </span><span class="parameter" id="-param-reprocessingAccessToken"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">reprocessingAccessToken</span>, </span><span class="parameter" id="-param-failIfNoService"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">failIfNoService</span> = <span class="default-value">true</span>, </span><span class="parameter" id="-param-activeAuthentication"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">activeAuthentication</span> = <span class="default-value">false</span>}</span>)</span>
+        </dt>
+        <dd>
+          
+        </dd>
+    </dl>
+  </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="activeAuthentication" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/activeAuthentication.html">activeAuthentication</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  If set to true, ICAO authentication will be completed using an active challenge (more secure).
+If set to false, ICAO authentication will be completed passively   (less secure).
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="baseURL" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/baseURL.html">baseURL</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  This is URL of the AwareID server used to issue an ICAO challenge to perform an active RFID scan
+Reprocess URL should only be set if active authentication is set to true.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="checkHologram" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/checkHologram.html">checkHologram</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Set to true to enable holographic checks on the document being scanned.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="doublePageSpread" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/doublePageSpread.html">doublePageSpread</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Set to true to enable double spread (two page spread) processing
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="encryptionNeeded" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/encryptionNeeded.html">encryptionNeeded</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Set to true if using a hybrid license, set to false if using a app bundle linked license.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="failIfNoService" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/failIfNoService.html">failIfNoService</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="hashCode" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> 
+
+</dt>
+<dd class="inherited">
+  The hash code for this object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="isInitilializedFunction" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/isInitilializedFunction.html">isInitilializedFunction</a></span>
+  <span class="signature">&#8594; (void Function<span class="signature">()</span>?)</span> 
+
+</dt>
+<dd>
+  This is called whenever the document reader has been initialized
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="multiPageProcessing" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/multiPageProcessing.html">multiPageProcessing</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  Set to true to enable multipage processing/
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onDocumentChipError" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/onDocumentChipError.html">onDocumentChipError</a></span>
+  <span class="signature">&#8594; (void Function<span class="signature">()</span>?)</span> 
+
+</dt>
+<dd>
+  Call back triggered whenever the document does not contain RFID but is required
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onDocumentReadError" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/onDocumentReadError.html">onDocumentReadError</a></span>
+  <span class="signature">&#8594; (void Function<span class="signature">()</span>?)</span> 
+
+</dt>
+<dd>
+  Call back triggered whenever the document reader encounters an error while scanning
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="onDocumentReaderTimedOut" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/onDocumentReaderTimedOut.html">onDocumentReaderTimedOut</a></span>
+  <span class="signature">&#8594; (void Function<span class="signature">()</span>?)</span> 
+
+</dt>
+<dd>
+  Callback triggered whenever the document reader timesout
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="performICAO" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/performICAO.html">performICAO</a></span>
+  <span class="signature">&#8594; <a href="../document_capture/ICAO.html">ICAO</a></span> 
+
+</dt>
+<dd>
+  Enumeration to set whether ICAO is required or not.
+The different enum values are:
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="processingComplete" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/processingComplete.html">processingComplete</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="reprocessingAccessToken" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/reprocessingAccessToken.html">reprocessingAccessToken</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  This is session/access token given during an enrollment or authentication from AwareID for
+communication with the AwareID server used to issue an ICAO challenge to perform an active RFID scan
+Reprocessing API key should only be set if active authentication is set to true.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="reprocessingAPIKey" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/reprocessingAPIKey.html">reprocessingAPIKey</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> 
+
+</dt>
+<dd>
+  This is API Key of the AwareID server used to issue an ICAO challenge to perform an active RFID scan
+Reprocessing API key should only be set if active authentication is set to true.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="returnEncryptedString" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/returnEncryptedString.html">returnEncryptedString</a></span>
+  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-encryptedString"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">encryptedString</span></span>)</span>?)</span> 
+
+</dt>
+<dd>
+  This function is called upon a completed document scan using a hybrid license
+The function provides a call back with the encrypted string created with a hybrid license
+The function can also be used further some UI changes or user action upon a completed scan.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="returnImages" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/returnImages.html">returnImages</a></span>
+  <span class="signature">&#8594; (void Function<span class="signature">(<span class="parameter" id="param-items"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/List-class.html">List</a></span> <span class="parameter-name">items</span></span>)</span>?)</span> 
+
+</dt>
+<dd>
+  This function is called upon a completed document scan using a app bundle-linked license
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="runtimeType" class="property inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/Type-class.html">Type</a></span> 
+
+</dt>
+<dd class="inherited">
+  A representation of the runtime type of the object.
+  <div class="features"><span class="feature">read-only</span><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="scenarioIdentifier" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/scenarioIdentifier.html">scenarioIdentifier</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> 
+
+</dt>
+<dd>
+  This identifies the workflow to be done.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="showSkipNextPageButton" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/showSkipNextPageButton.html">showSkipNextPageButton</a></span>
+  <span class="signature">&#8596; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
+
+</dt>
+<dd>
+  When set to true the skip page button is shown, when set to false, it is hidden
+  <div class="features"><span class="feature">read / write</span></div>
+
+</dd>
+
+        <dt id="timeout" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/timeout.html">timeout</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  Sets the document timeout for document capture in seconds. Defaults time is 20 seconds.
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="timeoutFromFirstDetect" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/timeoutFromFirstDetect.html">timeoutFromFirstDetect</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+        <dt id="timeoutFromFirstDocType" class="property">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/timeoutFromFirstDocType.html">timeoutFromFirstDocType</a></span>
+  <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a></span> 
+
+</dt>
+<dd>
+  
+  <div class="features"><span class="feature">final</span></div>
+
+</dd>
+
+      </dl>
+    </section>
+
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
+        <dt id="initializeDocumentReader" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/initializeDocumentReader.html">initializeDocumentReader</a></span><span class="signature">(<wbr><span class="parameter" id="initializeDocumentReader-param-pathToLicense"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">pathToLicense</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a></span>
+  </span>
+  
+
+</dt>
+<dd>
+  To use the document capture service offline you will
+need to initialize the document reader with a license file.
+Returns true if the initilialization is complete
+  
+
+</dd>
+
+        <dt id="noSuchMethod" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  Invoked when a nonexistent method or property is accessed.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+        <dt id="processByUsingCamera" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/processByUsingCamera.html">processByUsingCamera</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Opens the camera UI and initiates a document capture using the configuration set
+  
+
+</dd>
+
+        <dt id="processGallaryImage" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/processGallaryImage.html">processGallaryImage</a></span><span class="signature">(<wbr><span class="parameter" id="processGallaryImage-param-images"><span class="type-annotation">dynamic</span> <span class="parameter-name">images</span></span>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Allows the processing of an array of images that can selected from the device
+gallery
+  
+
+</dd>
+
+        <dt id="processRFID" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/processRFID.html">processRFID</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Starts the RFID processing workflow
+  
+
+</dd>
+
+        <dt id="setUpEventChannelListener" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/setUpEventChannelListener.html">setUpEventChannelListener</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  
+  
+
+</dd>
+
+        <dt id="stopRFIDProcessing" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/stopRFIDProcessing.html">stopRFIDProcessing</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Stops the processing of an RFID chip programmatically
+  
+
+</dd>
+
+        <dt id="toString" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  A string representation of this object.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+  <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
+  </span>
+  
+
+</dt>
+<dd class="inherited">
+  The equality operator.
+  <div class="features"><span class="feature">inherited</span></div>
+
+</dd>
+
+    </dl>
+  </section>
+    
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
+        <dt id="autoDownloadDatabase" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/autoDownloadDatabase.html">autoDownloadDatabase</a></span><span class="signature">(<wbr><span class="parameter" id="autoDownloadDatabase-param-databaseSegment"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">databaseSegment</span></span>)
+    <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+  </span>
+  
+
+</dt>
+<dd>
+  Automatically downloads the newest version of the document database that it finds on our server
+  
+
+</dd>
+
+        <dt id="downloadDatabase" class="callable">
+  <span class="name"><a href="../document_capture/AWDocumentCapture/downloadDatabase.html">downloadDatabase</a></span><span class="signature">(<wbr>)
+    <span class="returntype parameter">&#8594; dynamic</span>
+  </span>
+  
+
+</dt>
+<dd>
+  Choose this option if your app uses the Internet and you want to decrease the app package size.
+  
+
+</dd>
+
+    </dl>
+  </section>
+    
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../index.html">document_capture</a></li>
+  <li><a href="../document_capture/document_capture-library.html">document_capture</a></li>
+  <li class="self-crumb">AWDocumentCapture class</li>
+</ol>
+
+
+    <h5>document_capture library</h5>
+    <ol>
+      <li class="section-title"><a href="../document_capture/document_capture-library.html#classes">Classes</a></li>
+        <li><a href="../document_capture/AWDocumentCapture-class.html">AWDocumentCapture</a></li>
+
+
+
+
+
+
+      <li class="section-title"><a href="../document_capture/document_capture-library.html#enums">Enums</a></li>
+        <li><a href="../document_capture/DATABASE.html">DATABASE</a></li>
+        <li><a href="../document_capture/ICAO.html">ICAO</a></li>
+
+
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+        <li class="section-title"><a href="../document_capture/AWDocumentCapture-class.html#constructors">Constructors</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/AWDocumentCapture.html">AWDocumentCapture</a></li>
+
+
+        <li class="section-title">
+          <a href="../document_capture/AWDocumentCapture-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="../document_capture/AWDocumentCapture/activeAuthentication.html">activeAuthentication</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/baseURL.html">baseURL</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/checkHologram.html">checkHologram</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/doublePageSpread.html">doublePageSpread</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/encryptionNeeded.html">encryptionNeeded</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/failIfNoService.html">failIfNoService</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/isInitilializedFunction.html">isInitilializedFunction</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/multiPageProcessing.html">multiPageProcessing</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/onDocumentChipError.html">onDocumentChipError</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/onDocumentReadError.html">onDocumentReadError</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/onDocumentReaderTimedOut.html">onDocumentReaderTimedOut</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/performICAO.html">performICAO</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/processingComplete.html">processingComplete</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/reprocessingAccessToken.html">reprocessingAccessToken</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/reprocessingAPIKey.html">reprocessingAPIKey</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/returnEncryptedString.html">returnEncryptedString</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/returnImages.html">returnImages</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/scenarioIdentifier.html">scenarioIdentifier</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/showSkipNextPageButton.html">showSkipNextPageButton</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/timeout.html">timeout</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/timeoutFromFirstDetect.html">timeoutFromFirstDetect</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/timeoutFromFirstDocType.html">timeoutFromFirstDocType</a></li>
+
+        <li class="section-title"><a href="../document_capture/AWDocumentCapture-class.html#instance-methods">Methods</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/initializeDocumentReader.html">initializeDocumentReader</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/processByUsingCamera.html">processByUsingCamera</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/processGallaryImage.html">processGallaryImage</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/processRFID.html">processRFID</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/setUpEventChannelListener.html">setUpEventChannelListener</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/stopRFIDProcessing.html">stopRFIDProcessing</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+        <li class="section-title inherited"><a href="../document_capture/AWDocumentCapture-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+        <li class="section-title"><a href="../document_capture/AWDocumentCapture-class.html#static-methods">Static methods</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/autoDownloadDatabase.html">autoDownloadDatabase</a></li>
+          <li><a href="../document_capture/AWDocumentCapture/downloadDatabase.html">downloadDatabase</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    document_capture
+      1.0.201
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../static-assets/highlight.pack.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+

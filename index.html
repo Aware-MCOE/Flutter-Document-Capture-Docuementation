@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 6.2.2">
+  <meta name="description" content="document_capture API docs, for the Dart programming language.">
+  <title>document_capture - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="" data-using-base-href="false" class="light-theme">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li class="self-crumb">document_capture package</li>
+  </ol>
+  <div class="self-name">document_capture</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+  <div class="toggle" id="theme-button">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        brightness_4
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        brightness_5
+      </span>
+    </label>
+  </div>
+</header>
+<main>
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <!--
+This README describes the package. If you publish this package to pub.dev,
+this README's contents appear on the landing page for your package.
+
+For information about how to write a good package README, see the guide for
+[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+
+For general information about developing packages, see the Dart guide for
+[creating packages](https://dart.dev/guides/libraries/create-library-packages)
+and the Flutter guide for
+[developing packages and plugins](https://flutter.dev/developing-packages).
+-->
+<h2 id="awareid-document-capture-overview">AwareID Document Capture Overview</h2>
+<p>AwareID Document Capture allows for authentication and verification of various documents including:</p>
+<ul>
+<li>Passports</li>
+<li>Drivers' Licenses</li>
+<li>National IDs</li>
+</ul>
+<p>The package currently performs document scans via optical character recognition using an on device camera and RFID scan using NFC.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>iOS 11.0 and above</li>
+<li>Android API level 21</li>
+</ul>
+<p>Both platform will also need camera permissions set.</p>
+<p>For iOS an entry must be made in the info.plist to gain camera and NFC hardware permissions</p>
+<pre class="language-dart"><code>&lt;key&gt;NSCameraUsageDescription&lt;/key&gt;
+&lt;string&gt;Is used to access your device's camera&lt;/string&gt;
+
+&lt;key&gt;NFCReaderUsageDescription&lt;/key&gt;
+&lt;string&gt;Is used to access your device's NFC&lt;/string&gt;
+
+</code></pre>
+<p>For android the below lines must be added to gain camera and NFC hardware permissions in the Android Manifest</p>
+<pre class="language-dart"><code>&lt;uses-feature android:name="android.hardware.camera"/&gt;   
+
+&lt;uses-permission android:name="android.permission.CAMERA"/&gt;
+
+&lt;uses-permission android:name="android.permission.NFC" /&gt;
+</code></pre>
+<h2 id="installation">Installation</h2>
+<p>Installation of the AwareID Document Capture Package is done in 2 steps:</p>
+<ol>
+<li>Copy the document_capture folder to a desired location within your project.</li>
+<li>Reference the document_capture package in your project's pubspec.yaml file under dependencies</li>
+</ol>
+<pre class="language-dart"><code>dependencies:
+  flutter:
+    sdk: flutter
+    ...
+    ...
+  document_capture:
+    path: document_capture
+</code></pre>
+<p>The above example has the "document_capture" folder at the root of the project folder.</p>
+<pre class="language-dart"><code>dependencies:
+  flutter:
+    sdk: flutter
+    ...
+    ...
+  document_capture:
+    path: repo/document_capture
+</code></pre>
+<p>The above example has the "document_capture" folder in a folder called "repo" at the root of the project folder.</p>
+<p>Once the folder is in the desired location within the project and the document_capture sdk referenced in the pubspec.yaml then perfrom a <code>flutter pub get</code></p>
+<h2 id="getting-started">Getting started</h2>
+<p>Firstly you need to import the package in your dart code:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:document_capture/document_capture.dart';
+</code></pre>
+<p>The AwareID Document Capture SDK requires our database of documents from our server to operate.
+There are two ways of retrieving this database, both of which require an internet connection:</p>
+<ol>
+<li>Download the newest version of the database only if the current one is incompatible with the package.</li>
+</ol>
+<pre class="language-dart"><code class="language-dart">AWDocumentCapture.downloadDatabase();
+</code></pre>
+<ol start="2">
+<li>Download the newest version of the database if one is available even if your current database is still compatible with the package.</li>
+</ol>
+<pre class="language-dart"><code class="language-dart">AWDocumentCapture.autoDownloadDatabase();
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>Once the Document Capture database has been downloaded we can then call start capture to run the document capture process.</p>
+<pre class="language-dart"><code class="language-dart">AWDocumentCapture().processByUsingCamera()
+</code></pre>
+<p>This will perform a document capture using Optical Character Recognition (OCR).</p>
+<p>To perform a RFID scan automatically, if it's available, there is an optional enum value available to set while instantiating the AwDocumentCapture() object.</p>
+<pre class="language-dart"><code class="language-dart">AWDocumentCapture(
+  performICAO: ICAO.none
+)
+</code></pre>
+<p><code>ICAO.none</code> is the default value and does not perform RFID scan even if a chip is available.</p>
+<p><code>ICAO.ifAvailable</code> performs a RFID scan only if the document has a RFID chip.</p>
+<p><code>ICAO.required</code> will only successfully capture if the document has a RFID chip</p>
+<p>To retrieve the result of the OCR &amp;/or RFID scan the function <code>returnEncryptedString(encyptedString)</code> that triggers at the end of the document capture needs to be created.</p>
+<pre class="language-dart"><code class="language-dart"> AWDocumentCapture _awDocumentCapture = AWDocumentCapture(
+    returnEncryptedString: (encryptedString) {
+      log(encryptedString);
+    },
+ )
+</code></pre>
+<p>In our example above the encrypted string is logged to the console.</p>
+<h2 id="optional-fields">Optional fields</h2>
+<p>There are a few optional fields that can be set to change the behaviour of the Document Capture Package:</p>
+<ul>
+<li><code>checkHologram = false</code>,</li>
+<li><code>doublePageSpread = false</code>,</li>
+<li><code>multiPageProcessing = true</code>,</li>
+<li><code>scenarioIdentifier = ScenarioIdentifier.SCENARIO_FULL_PROCESS</code>,</li>
+</ul>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="document_capture">
+  <span class="name"><a href="document_capture/document_capture-library.html">document_capture</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="document_capture_errors">
+  <span class="name"><a href="document_capture_errors/document_capture_errors-library.html">document_capture_errors</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="document_capture_result">
+  <span class="name"><a href="models_document_capture_result/models_document_capture_result-library.html">document_capture_result</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+          <dt id="workflow">
+  <span class="name"><a href="workflow/workflow-library.html">workflow</a></span> 
+
+</dt>
+<dd>
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li class="self-crumb">document_capture package</li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">document_capture</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="document_capture/document_capture-library.html">document_capture</a></li>
+      <li><a href="document_capture_errors/document_capture_errors-library.html">document_capture_errors</a></li>
+      <li><a href="models_document_capture_result/models_document_capture_result-library.html">document_capture_result</a></li>
+      <li><a href="workflow/workflow-library.html">workflow</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    document_capture
+      1.0.201
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
+
+
+
+</body>
+
+</html>
+
